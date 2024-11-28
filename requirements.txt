@@ -1,0 +1,6 @@
+crewai==0.1.6
+crewai-tools==0.1.4
+openai==0.26.5
+google-search-results==2.4.1
+streamlit==1.19.0
+python-dotenv==1.0.0
