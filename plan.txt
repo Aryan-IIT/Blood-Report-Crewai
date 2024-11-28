@@ -1,0 +1,25 @@
+
+### Tasks breakdown 
+
+- Username and report on app - input of sample blood test report (input pdf, name, email) -> Streamlit 
+- AGENT 1 - take pdf and perform RAG on it for certain keywords -> Crewai pdf rag search
+- AGENT 2 - use those keywords and provide summary with it -> Normal agent, File write (save in txt)
+- AGENT 3 - help generate a prompt for google search engine -> Normal agent
+- Task - take those keywords and perform google searches of relevant articles, based on agent 3's output. -> Crewai Google serper search, Selenium scraper
+- Task - write the googled contents in a txt -> crewai File write
+- Email - https://mailtrap.io/blog/python-send-email-gmail/ (POST API) (mail both txt files)
+- Output - post both txt files for download on streamlit 
+
+[once built make an auth for APIs, can also build an agent for customized email]
+
+### File structure 
+
+Front end 
+    app.py (streamlit app that calls everything)
+    helper.py (helper functions for streamlit)
+Back end 
+    Server 
+        server (fast api)
+        email functionality
+    agents
+        agents (one py file)
